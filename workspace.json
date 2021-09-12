@@ -1,7 +1,8 @@
 {
   "version": 2,
   "projects": {
-    "atoms": "packages/atoms"
+    "atoms": "packages/atoms",
+    "molecules": "packages/molecules"
   },
   "cli": {
     "defaultCollection": "@nrwl/react"

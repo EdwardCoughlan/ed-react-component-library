@@ -1,0 +1,42 @@
+{
+  "root": "packages/molecules",
+  "sourceRoot": "packages/molecules/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/molecules",
+        "tsConfig": "packages/molecules/tsconfig.lib.json",
+        "project": "packages/molecules/package.json",
+        "entryFile": "packages/molecules/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "packages/molecules/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/molecules/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/molecules"],
+      "options": {
+        "jestConfig": "packages/molecules/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
