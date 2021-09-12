@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@@edwardcoughlan/ui-viewer": ["packages/ui-viewer/src/index.ts"],
       "@edwardcoughlan/atoms": ["packages/atoms/src/index.ts"],
       "@edwardcoughlan/molecules": ["packages/molecules/src/index.ts"]
     }
