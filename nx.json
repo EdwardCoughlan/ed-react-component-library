@@ -1,6 +1,6 @@
 {
   "extends": "@nrwl/workspace/presets/npm.json",
-  "npmScope": "edward-component-library",
+  "npmScope": "@edwardcoughlan",
   "affected": {
     "defaultBase": "master"
   },

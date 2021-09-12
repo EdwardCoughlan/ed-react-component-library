@@ -1,6 +1,5 @@
 import './atoms.module.scss';
 
-/* eslint-disable-next-line */
 export interface AtomsProps {
   welcomeMessage?: string;
 }
