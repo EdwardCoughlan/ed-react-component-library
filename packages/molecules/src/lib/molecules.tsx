@@ -4,8 +4,6 @@ import { Atoms } from '@edwardcoughlan/atoms';
 /* eslint-disable-next-line */
 export interface MoleculesProps {}
 
-export function Molecules() {
-  return <Atoms />;
+export function Molecules(): JSX.Element {
+  return <Atoms welcomeMessage="Hi from molecules" />;
 }
-
-export default Molecules;

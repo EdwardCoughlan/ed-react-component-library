@@ -6,7 +6,7 @@ export interface AtomsProps {
   welcomeMessage?: string;
 }
 
-const Atoms = ({
+export const Atoms = ({
   welcomeMessage = 'Welcome to Atoms!',
 }: AtomsProps): JSX.Element => {
   const [isHovered, setIsHovered] = useState(false);
@@ -16,9 +16,7 @@ const Atoms = ({
       onMouseEnter={(): void => setIsHovered(true)}
       onMouseLeave={(): void => setIsHovered(false)}
     >
-      <h1>${welcomeMessage}</h1>
+      <h1>{welcomeMessage}</h1>
     </div>
   );
 };
-
-export default Atoms;

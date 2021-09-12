@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Molecules should render successfully 1`] = `
+<div>
+  <div
+    class="background"
+  >
+    <h1>
+      Hi from molecules
+    </h1>
+  </div>
+</div>
+`;

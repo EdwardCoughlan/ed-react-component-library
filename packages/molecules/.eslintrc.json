@@ -1,5 +1,10 @@
 {
-  "extends": ["plugin:@nrwl/nx/react", "../../.eslintrc.json"],
+  "extends": [
+    "plugin:@nrwl/nx/react",
+    "../../.eslintrc.json",
+    "airbnb",
+    "airbnb-typescript"
+  ],
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
@@ -7,11 +12,21 @@
       "parserOptions": {
         "project": ["packages/molecules/tsconfig.*?.json"]
       },
-      "rules": {}
+      "rules": {
+        "react/react-in-jsx-scope" : "off"
+      }
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.tsx"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "rules": {}
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": ["error"]
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
