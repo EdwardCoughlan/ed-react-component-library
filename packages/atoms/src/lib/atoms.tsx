@@ -20,3 +20,4 @@ export const Atoms = ({
     </div>
   );
 };
+export default Atoms;
