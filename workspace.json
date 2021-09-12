@@ -2,7 +2,8 @@
   "version": 2,
   "projects": {
     "atoms": "packages/atoms",
-    "molecules": "packages/molecules"
+    "molecules": "packages/molecules",
+    "ui-viewer": "packages/ui-viewer"
   },
   "cli": {
     "defaultCollection": "@nrwl/react"
