@@ -2,7 +2,11 @@
   "name": "nx-react-component-library",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx run-many --target=build --all --parallel",
+    "lint": "nx run-many --target=lint --all --parallel",
+    "test": "nx run-many --target=test --all --parallel"
+  },
   "private": true,
   "dependencies": {
     "classnames": "^2.3.1",
