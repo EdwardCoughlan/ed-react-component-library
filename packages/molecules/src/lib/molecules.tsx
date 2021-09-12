@@ -1,9 +1,13 @@
-import './molecules.module.scss';
 import { Atoms } from '@edwardcoughlan/atoms';
-
-/* eslint-disable-next-line */
-export interface MoleculesProps {}
+import cn from 'classnames';
+import classes from './molecules.module.scss';
 
 export function Molecules(): JSX.Element {
-  return <Atoms welcomeMessage="Hi from molecules" />;
+  return (
+    <div className={cn(classes.molecules)}>
+      <Atoms welcomeMessage="Hi from molecules" />
+    </div>
+  );
 }
+
+export default Molecules;
