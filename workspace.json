@@ -1,7 +1,16 @@
 {
   "version": 2,
-  "projects": {},
+  "projects": {
+    "atoms": "packages/atoms"
+  },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/react"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    }
   }
 }
