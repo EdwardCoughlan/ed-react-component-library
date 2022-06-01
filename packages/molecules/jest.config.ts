@@ -1,9 +1,10 @@
-module.exports = {
-  displayName: 'atoms',
+/* eslint-disable */
+export default {
+  displayName: 'molecules',
   preset: '../../jest.preset.js',
   transform: {
     '^.+\\.[tj]sx?$': 'babel-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/packages/atoms',
+  coverageDirectory: '../../coverage/packages/molecules',
 };

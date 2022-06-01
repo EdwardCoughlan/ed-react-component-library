@@ -1,12 +1,12 @@
 {
-  "extends": "@nrwl/workspace/presets/npm.json",
+  "extends": "nx/presets/npm.json",
   "npmScope": "edwardcoughlan",
   "affected": {
     "defaultBase": "master"
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "nx/tasks-runners/default",
       "options": {
         "cacheableOperations": [
           "build",
@@ -14,9 +14,19 @@
           "test",
           "e2e",
           "build-storybook"
-        ]
+        ],
+        "parallel": 1
       }
     }
   },
-  "projects": {}
+  "cli": {
+    "defaultCollection": "@nrwl/react"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    }
+  }
 }

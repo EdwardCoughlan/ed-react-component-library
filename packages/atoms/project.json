@@ -1,11 +1,10 @@
 {
-  "root": "packages/atoms",
   "sourceRoot": "packages/atoms/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:package",
+      "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/atoms",
@@ -34,7 +33,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/packages/atoms"],
       "options": {
-        "jestConfig": "packages/atoms/jest.config.js",
+        "jestConfig": "packages/atoms/jest.config.ts",
         "passWithNoTests": true
       }
     }
