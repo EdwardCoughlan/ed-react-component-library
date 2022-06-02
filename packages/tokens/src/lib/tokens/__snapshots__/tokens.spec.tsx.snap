@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tokens should render successfully 1`] = `
+<div>
+  <div
+    class="background"
+  >
+     
+    <h1>
+      Welcome to Tokens!
+    </h1>
+  </div>
+</div>
+`;

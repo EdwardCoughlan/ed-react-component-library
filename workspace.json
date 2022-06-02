@@ -1,8 +1,8 @@
 {
   "version": 2,
   "projects": {
-    "atoms": "packages/atoms",
-    "molecules": "packages/molecules",
+    "components": "packages/components",
+    "tokens": "packages/tokens",
     "ui-viewer": "packages/ui-viewer"
   }
 }

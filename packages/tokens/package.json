@@ -1,0 +1,9 @@
+{
+  "name": "@edwardcoughlan/tokens",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "classnames": "^2.3.1"
+  }
+}
