@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@edwardcoughlan/atoms": ["packages/atoms/src/index.ts"],
-      "@edwardcoughlan/molecules": ["packages/molecules/src/index.ts"]
+      "@edwardcoughlan/components": ["packages/components/src/index.ts"],
+      "@edwardcoughlan/tokens": ["packages/tokens/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

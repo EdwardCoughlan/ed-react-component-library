@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components should render successfully 1`] = `
+<div>
+  <div
+    class="molecules"
+  >
+    <div
+      class="background"
+    >
+       
+      <h1>
+        Hi from molecules
+      </h1>
+    </div>
+  </div>
+</div>
+`;

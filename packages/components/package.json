@@ -1,0 +1,12 @@
+{
+  "name": "@edwardcoughlan/components",
+  "version": "0.0.1",
+  "dependencies": {
+    "@edwardcoughlan/tokens": "*"
+  },
+  "peerDependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "classnames": "^2.3.1"
+  }
+}
