@@ -4,6 +4,7 @@
     "esbenp.prettier-vscode",
     "firsttris.vscode-jest-runner",
     "dbaeumer.vscode-eslint",
-    "alexandernanberg.horizon-theme-vscode"
+    "alexandernanberg.horizon-theme-vscode",
+    "eamodio.gitlens"
   ]
 }
