@@ -1,5 +1,4 @@
 {
-  "root": "packages/ui-viewer",
   "sourceRoot": "packages/ui-viewer/src",
   "projectType": "library",
   "tags": [],

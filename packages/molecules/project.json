@@ -1,11 +1,10 @@
 {
-  "root": "packages/molecules",
   "sourceRoot": "packages/molecules/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:package",
+      "executor": "@nrwl/web:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/molecules",
@@ -34,7 +33,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/packages/molecules"],
       "options": {
-        "jestConfig": "packages/molecules/jest.config.js",
+        "jestConfig": "packages/molecules/jest.config.ts",
         "passWithNoTests": true
       }
     }
