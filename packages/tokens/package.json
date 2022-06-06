@@ -9,8 +9,7 @@
   },
   "exports":{
     "./index.css": {
-      "import" : "./index.css",
-      "require": "./index.css"
+      "import" : "./index.css"
     }
   } 
 }
