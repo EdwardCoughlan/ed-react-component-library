@@ -1,6 +1,6 @@
 {
   "name": "@edwardcoughlan/components",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "dependencies": {
     "@edwardcoughlan/tokens": "*"
   },
