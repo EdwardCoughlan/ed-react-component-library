@@ -8,5 +8,3 @@ export const Components :FC = () => (
     <Tokens welcomeMessage="Hi from molecules" />
   </div>
 );
-
-export default Components;

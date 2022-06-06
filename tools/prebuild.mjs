@@ -3,7 +3,7 @@ import { execSync } from 'child_process';
 import { readdirSync } from 'fs';
 import semver from 'semver';
 
-const packagesPath = './dist/packages';
+const packagesPath = './packages';
 
 const getDirectories = (source) =>
   readdirSync(source, { withFileTypes: true })
@@ -13,14 +13,24 @@ const getDirectories = (source) =>
 
 const libraries = getDirectories(packagesPath);
 
-const publishLibrary = (lib) =>
-  execSync(`cd ${packagesPath}/${lib}/ && npm publish`);
+const getLibraryVersion = (lib) =>
+  Object.values(
+    JSON.parse(
+      execSync(
+        `cd ${packagesPath}/${lib}/ && npm view . version --json`
+      ).toString()
+    )
+  )[0];
+
+const setLibraryVersion = (lib, version) =>
+  execSync(`cd ${packagesPath}/${lib}/ && npm version ${version}`);
 
 console.log(`Publishing ${libraries} to npm`);
 
 libraries.forEach((lib) => {
-  console.log(`Publishing ${lib}`);
-  publishLibrary(lib);
+  const version = getLibraryVersion(lib);
+  console.log(`Setting ${lib} latest version ${semver.inc(version, 'patch')}`);
+  setLibraryVersion(lib, semver.inc(version, 'patch'));
 });
 
 console.log(`Published all libraries ${libraries}`);
