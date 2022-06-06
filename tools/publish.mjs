@@ -7,7 +7,8 @@ const distPackagesPath = './dist/packages';
 const getDirectories = (source) =>
   readdirSync(source, { withFileTypes: true })
     .filter((dirent) => dirent.isDirectory())
-    .map((dirent) => dirent.name);
+    .map((dirent) => dirent.name)
+    .reverse();
 
 const libraries = getDirectories(distPackagesPath);
 
@@ -36,3 +37,5 @@ libraries.forEach((lib) => {
   console.log(`Publishing ${lib}`);
   publishLibrary(lib);
 });
+
+console.log(`Published all libraries ${libraries}`);
