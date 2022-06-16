@@ -2,9 +2,16 @@
   "name": "@edwardcoughlan/tokens",
   "version": "0.0.0",
   "style": "index.css",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/EdwardCoughlan/ed-react-component-library.git",
+    "directory": "packages/tokens",
+    "type": "git"
+  },
   "peerDependencies": {
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "classnames": "^2.3.1"
   },
   "exports":{
