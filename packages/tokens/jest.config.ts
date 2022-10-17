@@ -1,4 +1,5 @@
 /* eslint-disable */
+/* eslint-disable */
 export default {
   displayName: 'tokens',
   preset: '../../jest.preset.js',
