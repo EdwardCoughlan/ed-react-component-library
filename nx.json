@@ -2,8 +2,9 @@
   "extends": "nx/presets/npm.json",
   "npmScope": "edwardcoughlan",
   "affected": {
-    "defaultBase": "master"
+    "defaultBase": "main"
   },
+  "workspaceLayout": {"libsDir": "packages"},
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
