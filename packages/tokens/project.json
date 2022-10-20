@@ -5,7 +5,7 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:rollup",
+      "executor": "@nrwl/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/tokens",
@@ -33,7 +33,7 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/packages/tokens"],
+      "outputs": ["{workspaceRoot}/coverage/packages/tokens"],
       "options": {
         "jestConfig": "packages/tokens/jest.config.ts",
         "passWithNoTests": true

@@ -4,5 +4,6 @@
     "components": "packages/components",
     "tokens": "packages/tokens",
     "ui-viewer": "packages/ui-viewer"
-  }
+  },
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }
