@@ -8,9 +8,8 @@ exports[`Components should render successfully 1`] = `
     <div
       class="background"
     >
-       
       <h1>
-        Hi from molecules
+        Hi from components
       </h1>
     </div>
   </div>

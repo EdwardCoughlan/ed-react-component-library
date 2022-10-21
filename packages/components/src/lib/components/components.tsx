@@ -5,7 +5,7 @@ import classes from './components.module.scss';
 
 export const Components: FC = () => (
   <div className={cn(classes.molecules)}>
-    <Tokens welcomeMessage="Hi from molecules" />
+    <Tokens welcomeMessage="Hi from components" />
   </div>
 );
 

@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BLoc component without props 1`] = `
+<div>
+  <div>
+    Test with no props
+  </div>
+</div>
+`;
+
+exports[`Bloc component with props 1`] = `
+<div>
+  <div>
+    I am a component with props. That doesn't use a mapper
+  </div>
+</div>
+`;
+
+exports[`Bloc component with props to be mapped 1`] = `
+<div>
+  <div>
+    Altered I am a component with props. That that will be mapped
+  </div>
+</div>
+`;
+
+exports[`Bloc with BlocContext being overridden by inner value 1`] = `
+<div>
+  <div>
+    override from block: I should have a prefix of override from bloc
+  </div>
+</div>
+`;
+
+exports[`Bloc with component coming from BlocContext 1`] = `
+<div>
+  <div>
+    context : I am a component that is a part of the global context.
+  </div>
+</div>
+`;
+
+exports[`complex prodvider setup 1`] = `
+<div>
+  <div>
+    <p>
+      I am the component that add another component to the context
+    </p>
+    <div>
+      <p>
+        I am Bloc Component
+      </p>
+      <div>
+        I am Component One
+      </div>
+    </div>
+  </div>
+</div>
+`;
