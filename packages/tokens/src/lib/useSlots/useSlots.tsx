@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import {
   Children,
   createElement,
@@ -21,8 +22,7 @@ type NamedSlot = {
   children?: ReactNode;
 };
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-const useSlots = (
+export const useSlots = (
   slotChildren: ReactNode,
   namedSlots: string[],
 ) : [
@@ -49,7 +49,6 @@ const useSlots = (
   );
 
   return [
-    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
     ({ name, children }: NamedSlot) : FunctionComponentElement<{ children?: ReactNode; }> => {
       if (!name) {
         return createElement(Fragment, null, slots.children);
@@ -61,5 +60,3 @@ const useSlots = (
     (slot: string): (ReactNode | ReactFragment | ReactPortal)[] => slots[slot],
   ];
 };
-
-export default useSlots;
