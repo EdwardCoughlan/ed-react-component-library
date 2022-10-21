@@ -18,7 +18,7 @@
           "e2e",
           "build-storybook"
         ],
-        "parallel": 3
+        "parallel": 1
       }
     }
   },
@@ -27,8 +27,12 @@
   },
   "generators": {
     "@nrwl/react": {
-      "application": {
-        "babel": true
+      "component": {
+        "style": "scss"
+      },
+      "library": {
+        "style": "scss",
+        "linter": "eslint"
       }
     }
   },
@@ -43,5 +47,16 @@
     "build-storybook": {
       "inputs": ["default", "^default", "{workspaceRoot}/.storybook/**/*"]
     }
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "production": [
+      "default",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/jest.config.[jt]s",
+      "!{projectRoot}/.eslintrc.json"
+    ],
+    "sharedGlobals": ["{workspaceRoot}/babel.config.json"]
   }
 }

@@ -12,7 +12,8 @@
   "peerDependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
-    "classnames": "^2.3.1"
+    "classnames": "^2.3.1",
+    "@edwardcoughlan/tokens": "*"
   },
   "exports":{
     "./index.css": {
