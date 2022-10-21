@@ -8,7 +8,7 @@ import {
   ReactPortal,
 } from 'react';
 
-type Component = {
+type Component2 = {
   props?: unknown;
   type?: () => { name?: string };
 };
@@ -21,19 +21,18 @@ type NamedSlot = {
   children?: ReactNode;
 };
 
-export const useSlots = (
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+const useSlots = (
   slotChildren: ReactNode,
   namedSlots: string[],
-): [
-    ({
-      name,
-      children,
-    }: NamedSlot) => FunctionComponentElement<{ children?: ReactNode } & never[]>,
+) : [
+    ({ name, children }: NamedSlot) => FunctionComponentElement<{ children?: ReactNode; }>,
     (slot: string) => boolean,
+    (slot: string) => (ReactNode | ReactFragment | ReactPortal)[],
   ] => {
   const slots = Children.toArray(slotChildren).reduce(
     (collector: CollectorType, child) => {
-      const component = child as Component;
+      const component = child as Component2;
 
       const slotName = component?.type?.name && namedSlots.includes(component.type.name)
         ? component.type.name
@@ -50,8 +49,8 @@ export const useSlots = (
   );
 
   return [
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    ({ name, children }: NamedSlot): FunctionComponentElement<any> => {
+    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+    ({ name, children }: NamedSlot) : FunctionComponentElement<{ children?: ReactNode; }> => {
       if (!name) {
         return createElement(Fragment, null, slots.children);
       }
@@ -59,6 +58,7 @@ export const useSlots = (
       return createElement(Fragment, null, filteredChildren);
     },
     (slot: string): boolean => slot in slots && !!slots[slot],
+    (slot: string): (ReactNode | ReactFragment | ReactPortal)[] => slots[slot],
   ];
 };
 
