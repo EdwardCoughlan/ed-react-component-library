@@ -5,7 +5,6 @@ exports[`Tokens should render successfully 1`] = `
   <div
     class="background"
   >
-     
     <h1>
       Welcome to Eds Tokens!
     </h1>
