@@ -58,5 +58,13 @@
       "!{projectRoot}/.eslintrc.json"
     ],
     "sharedGlobals": ["{workspaceRoot}/babel.config.json"]
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
   }
 }
