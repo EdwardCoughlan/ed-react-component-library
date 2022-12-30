@@ -1,3 +1,3 @@
 export * from './bloc';
-export * from './BlocProvider';
+export * from './bloc-provider';
 export * from './types';

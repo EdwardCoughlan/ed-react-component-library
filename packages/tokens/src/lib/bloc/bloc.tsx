@@ -2,7 +2,7 @@ import {
   createElement,
   useContext,
 } from 'react';
-import { BlocContext } from './BlocProvider';
+import { BlocContext } from './bloc-provider';
 import { ComponentMapperType } from './types';
 
 export type BlocProps = {

@@ -7,7 +7,7 @@
   "files": [
     "../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
     "../../node_modules/@nrwl/react/typings/image.d.ts",
-    "./src/lib/bloc/BlocProvider.tsx"
+    "src/lib/bloc/bloc-provider.tsx"
   ],
   "exclude": [
     "**/*.spec.ts",
