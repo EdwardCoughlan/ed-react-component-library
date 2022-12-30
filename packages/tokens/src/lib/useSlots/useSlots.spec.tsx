@@ -1,6 +1,6 @@
 import React, { FC, PropsWithChildren } from 'react';
 import { render } from '@testing-library/react';
-import useSlots from './useSlots';
+import { useSlots } from './useSlots';
 
 const AComponentForSlotting: FC = () => <div>A component for slotting</div>;
 
