@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basic 1`] = `
+<div>
+  <div>
+    <div>
+      A component for slotting
+    </div>
+    <div>
+      I am a default value
+    </div>
+    <div>
+      <div>
+        default item
+      </div>
+      and some string
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Inverted 1`] = `
+<div>
+  <div>
+    <div>
+      A component for slotting
+    </div>
+    <div>
+      I am a default value
+    </div>
+    <div>
+      <div>
+        default item
+      </div>
+      and some string
+    </div>
+  </div>
+</div>
+`;

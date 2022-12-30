@@ -54,7 +54,7 @@ test('BLoc component without props', () => {
       id="1"
       componentMapperIdentifier="componentWithNoProps"
       componentMappers={componentMappers}
-    />
+    />,
   );
 
   expect(container).toMatchSnapshot();
@@ -70,7 +70,7 @@ test('Bloc component with props', () => {
         contents: test,
       }}
       componentMappers={componentMappers}
-    />
+    />,
   );
   expect(container).toMatchSnapshot();
 });
@@ -85,7 +85,7 @@ test("BLoc component doesn't exists", () => {
       }}
       componentMapperIdentifier="componentThatDoesNotExists"
       componentMappers={componentMappers}
-    />
+    />,
   );
   expect(logSpy).toHaveBeenCalled();
 });
@@ -99,25 +99,23 @@ test('Bloc component with props to be mapped', () => {
         contents: 'I am a component with props. That that will be mapped',
       }}
       componentMappers={componentMappers}
-    />
+    />,
   );
   expect(container).toMatchSnapshot();
 });
 
 test('Bloc component with props to be mapped error', () => {
-  expect(() =>
-    render(
-      <Bloc
-        id="1"
-        componentMapperIdentifier="componentWithProps3"
-        props={{
-          contents:
+  expect(() => render(
+    <Bloc
+      id="1"
+      componentMapperIdentifier="componentWithProps3"
+      props={{
+        contents:
             'I am a component with props. That that will be mapped but an error will happen',
-        }}
-        componentMappers={componentMappers}
-      />
-    )
-  ).toThrowError();
+      }}
+      componentMappers={componentMappers}
+    />,
+  )).toThrowError();
 });
 
 test('Bloc with component coming from BlocContext', () => {
@@ -147,7 +145,7 @@ test('Bloc with component coming from BlocContext', () => {
         }}
         componentMappers={componentMappers}
       />
-    </BlocProvider>
+    </BlocProvider>,
   );
   expect(container).toMatchSnapshot();
 });
@@ -185,7 +183,7 @@ test('Bloc with BlocContext being overridden by inner value', () => {
           },
         }}
       />
-    </BlocProvider>
+    </BlocProvider>,
   );
   expect(container).toMatchSnapshot();
 });
@@ -199,7 +197,7 @@ test('No component mappers secified', () => {
       props={{
         contents: 'I am a component that is a part of the global context.',
       }}
-    />
+    />,
   );
 
   expect(logSpy).toHaveBeenCalled();
@@ -239,7 +237,7 @@ test('complex prodvider setup', () => {
         componentMapperIdentifier="BlocComponentToAddComponents"
         id="bloc-component-to-add-components"
       />
-    </BlocProvider>
+    </BlocProvider>,
   );
   expect(container).toMatchSnapshot();
 });
